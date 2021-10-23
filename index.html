@@ -8,25 +8,25 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <form action="" class="form-registrer">
-        <h1 class="form__title"></h1>
+    <form action="insertar.php" class="form-registrer" method="post" enctype="multipart/form-data">
+        <h1 class="form__title">introducir informacion</h1>
 
         <div class="container--flex">
-            <label for="" class="form__label"></label>
-            <input type="text" class="form__input">
+            <label for="" class="form__label">nombre</label>
+            <input type="text" class="form__input" name="nombre" required>
         </div>
 
         <div class="container--flex">
-            <label for="" class="form__label"></label>
-            <input type="text" class="form__input">
+            <label for="" class="form__label">apellidos</label>
+            <input type="text" class="form__input" required>
         </div>
 
         <div class="container--flex">
-            <label for="" class="form__label"></label>
-            <input type="text" class="form__input">
+            <label for="" class="form__label">fecha</label>
+            <input type="date" class="form__input" required>
         </div>
-        <input type="file">
-        <input type="submit">
+        <input type="file" name="archivo" class="form__file" required>
+        <input type="submit" class="form__submit">
     </form>
 </body>
 </html>
