@@ -10,7 +10,7 @@ if($_FILES["archivo"]){
     $nombre_base = basename($_FILES["archivo"]["name"]);
     $nombre_final = date("m-d-y"). "-" . date("H-i-s"). "-" . $nombre_base;
     $ruta = "archivos/" . $nombre_final;
-    $subirarchivo = move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
+   // $subirarchivo = move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
 
     if($subirarchivo){
         $insertarSQL = "INSERT INTO informes(nombre, apellidos, fecha, archivo) VALUES('$nombre', '$apellidos', '$fecha'; '$ruta')";
